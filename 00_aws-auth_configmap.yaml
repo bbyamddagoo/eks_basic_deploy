@@ -1,0 +1,19 @@
+############################################
+# CLUSTER_NAME | IAM-ROLE-NAME Edit!!!!!
+############################################
+# apiVersion: v1
+# data:
+#   mapRoles: |
+#     - groups:
+#       - system:bootstrappers
+#       - system:nodes
+#       rolearn: arn:aws:iam::061203270663:role/CLUSTER_NAME
+#       username: system:node:{{EC2PrivateDNSName}}
+#     - rolearn: arn:aws:iam::061203270663:role/IAM-ROLE-NAME
+#       username: IAM-ROLE-NAME
+#       groups: 
+#         - system:masters     
+# kind: ConfigMap
+# metadata:
+#   name: aws-auth
+#   namespace: kube-system
